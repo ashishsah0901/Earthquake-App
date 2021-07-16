@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/magnitudeET"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:text="1.0"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/magnitude_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/placeCL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:id="@+id/placeCL"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/magnitudeET"
+        app:layout_constraintEnd_toStartOf="@id/timeCL">
+
+        <TextView
+            android:id="@+id/placeET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="NAGPUR"
+            android:textColor="@color/textColorEarthquakeDetails"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/cityET"/>
+        <TextView
+            android:id="@+id/cityET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="NAGPUR"
+            android:textColor="@color/textColorEarthquakeLocation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/placeET"
+            app:layout_constraintEnd_toEndOf="@id/placeET"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:id="@+id/timeCL"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/placeCL">
+
+        <TextView
+            android:id="@+id/dateET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="NAGPUR"
+            android:textAlignment="center"
+            android:textColor="@color/textColorEarthquakeDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/timeET"/>
+        <TextView
+            android:id="@+id/timeET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="NAGPUR"
+            android:textAlignment="center"
+            android:textColor="@color/textColorEarthquakeDetails"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/dateET"
+            app:layout_constraintStart_toStartOf="@id/dateET"
+            app:layout_constraintTop_toBottomOf="@id/dateET"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
